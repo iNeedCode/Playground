@@ -1,0 +1,19 @@
+%div.heading
+  %h3 LATEST ARRIVALS
+  %p.subheading Check our all latest in this section
+  %hr
+  %br
+
+%div.span-2.item
+  = image_tag "pfeil_links.png", style: "padding:45px 0px 0px 40px;"
+  
+- for i in 1..5
+  %div.item.span-4
+    / REQUIREMENT => image should be 150px width x 110px height
+    = image_tag "other_products.jpg"
+    Premium Denim Women's Hidden
+    %span.red $179.00
+    | Buy   
+    
+%div.span-2.item.last
+  = image_tag "pfeil_rechts.png", style: "padding:45px 0px 0px 0px;"

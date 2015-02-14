@@ -1,0 +1,195 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self   
+ *= require blueprint      
+ *= require_tree . 
+*/                                                              
+
+/*****************************************
+* FONTS
+*****************************************/           
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('BEBAS___-webfont.eot');
+    src: url('BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('BEBAS___-webfont.woff') format('woff'),
+         url('BEBAS___-webfont.ttf') format('truetype'),
+         url('BEBAS___-webfont.svg#BebasRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$Bebas: 'BebasRegular', Arial, sans-serif;  
+$Default: Arial;
+
+
+/*****************************************
+* VARIABLEN
+*****************************************/
+
+$white: #f6f6f4;
+$real_white: #FFF;
+$black: #2d2d2d;
+$gray: #c3c3c3; 
+$dark_gray: #858585;
+$red: #bc3726;     
+$orange: #ea6a53; 
+
+
+$radius: 20px;
+
+/*****************************************
+* MIXINS
+*****************************************/
+@mixin margin_top($top) { margin-top: $top !important;}
+@mixin margin_right($right) { margin-right: $right !important;}
+@mixin margin_bottom($bottom) { margin-bottom: $bottom !important;}
+@mixin margin_left($left) { margin-left: $left !important;}
+
+/*****************************************
+* HELPER
+*****************************************/
+.white{color: $white;} 
+.red{color: $red;}
+.gray{color: $dark_gray;}
+
+.margin_left_5{margin-left: 5px;}
+.margin_top_10{margin-top: 10px !important;}  
+.border{ border: 1px solid black;}
+ 
+
+/*****************************************
+* MAIN LAYOUT
+*****************************************/ 
+
+table,th,tr,td{border:1px solid black;}
+
+body{
+	background: $white; 
+	font-family: $Default;  
+	color: $black; 
+	font-size: 12px;
+} 
+#content{
+	margin-top: 10px;
+} 
+#sidebar{
+	.item{
+		margin-bottom: 10px;
+	}
+}
+
+#header {
+	background: $black;
+	color: $gray;
+	padding: 8px 19px 0px 19px;     
+	height:35px;      
+	input{
+		background-color: lighten($black,12%);
+		color: $dark_gray;
+		border: none;
+		margin:0px;
+		border-radius: $radius;
+		width: 115px;
+	} 
+	button{
+		background-color: $orange;
+		border-radius: $radius;
+		color: $white;
+		padding: 5px 8px;
+		border:none;
+	}   
+	button:hover{background-color: $red;}
+}
+                   
+#main-branding{
+	background: transparent;   
+	height: 70px;
+	padding-top: 20px;     
+		.logo{
+			height: 50px;
+		}    
+		.ad{
+			height: 59px;  
+			float: right;
+			margin-right: 50px;
+		}
+}          
+
+#navigation {  
+	background: $gray; 
+	height: 45px;         
+	font-family: $Bebas;  
+	text-shadow: 1px 0px 1px $dark_gray; 
+		ul{padding:0px;
+			margin:0px;
+		}
+		li{
+			font-size: 14px;
+			float:left;
+			background: transparent;
+			list-style: none; 
+			padding: 14px 15px 10px 15px;
+			border-right: 1px darken($gray, 10%) solid;
+		}
+		li:last-child{
+			border-right: none;
+		}
+		li:hover{
+			background-color: $black;
+			color: $white;
+		}
+}  
+.search{    
+	padding: 12px 10px 0px 0px;
+	float: right !important;    
+	input{         
+		border-radius: $radius;
+		width: 125px;
+		color: $gray;
+		border: none;
+		padding: 5px; 	
+		background: url(lupe.gif) scroll no-repeat 110px 5px;
+		background-color: $white;
+	}             
+}     
+
+#footer{
+	background: $black;
+	height: 93px;
+	padding-top:21px;
+	color: $dark_gray;     
+	.logo{ 
+		height: 51px;
+	}   
+}                                         
+
+/*****************************************
+* Product Grid View
+*****************************************/
+.grid_view{
+	.item{    
+		font-size: 11px;
+		height: 190px;
+		padding: 0px 32px 0px 0px;
+		margin: 17px 0px;
+	}
+}
+
+/*****************************************
+* Suggestions
+*****************************************/
+#suggestions{
+	background-color: $real_white;  
+	margin-bottom: 20px; 
+	.heading{
+		width: 88%;
+		padding-left: 5%;
+	}
+	.item{ 
+		font-size:11px;
+		height: 150px;
+	}
+}

@@ -1,0 +1,38 @@
+// Place all the styles related to the page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+               
+/*****************************************
+* FONTS
+*****************************************/
+$Bebas: 'BebasRegular', Arial, sans-serif;
+
+
+/*****************************************
+* VARIABLEN
+*****************************************/
+$gray: #c3c3c3; 
+$dark_gray: #858585;
+$white: #f6f6f4;
+$black: #2d2d2d;
+$red: #bc3726;     
+$orange: #ea6a53;
+
+/*****************************************
+* HELPER
+*****************************************/
+
+h3{   
+	font-family: $Bebas;
+	margin:0px; 
+	margin-top:10px;
+}
+
+.subheading{
+	color: $dark_gray;
+	margin-bottom: 12px;
+}               
+hr{
+	background-color: $dark_gray; 
+	border: 0,3px solid $dark_gray;
+}

@@ -1,0 +1,25 @@
+%div.span-17
+  =image_tag "categorie_main_banner.jpg" 
+  %div.span-17.grid_view
+    %h3 LATEST ARRIVALS
+    %p.subheading Check our all latest in this section 
+    = render :partial => 'shared/product_grid_view' 
+  
+%div#sidebar.span-7.last
+  %div.item
+    = render :partial => 'shared/forthcomming'
+  %div.item
+    = render :partial => 'shared/discount'
+  %div.item
+    = render :partial => 'shared/get_discount'
+  %div.item  
+    = render :partial => 'shared/twitter_updates'       
+    
+ 
+  
+
+
+
+%div#suggestions.span-24
+  = render :partial => 'shared/suggestions'
+  

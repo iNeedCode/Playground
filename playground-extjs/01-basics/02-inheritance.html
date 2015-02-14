@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   	<title>Inheritance</title>
+
+	<link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css">
+	<script type="text/javascript" src="../extjs/ext-all-dev.js"></script>
+	<script type="text/javascript" src="js/Category.js"></script>
+	<script type="text/javascript">
+	Ext.onReady(function(){
+		var category = Ext.create("MyApp.Category",{
+        	id      : 1,
+         	name    : "Entertainment",
+         	description  : "Expenses to have some fun"
+    	});
+    	console.log(category.get("name"));
+    	console.log(category.data);
+    });
+	</script>
+</head>		
+<body>
+	<p>
+		Ext.define: This shorthand internally calls the create method from the class manager in order to create a new class. In addition we can override methods and properties from an existing class.
+	</p>
+	<p>
+		Ext.create: This shorthand is an alias for the instantiate method from the class manager. We can use this shorthand to create objects from an existing class.
+	</p>
+	<p>
+		Ext.widget: This shorthand calls the instantiateByAlias method to create instances of the given alias. An alias is a short name for a class.
+	</p>
+</body>
+</html>

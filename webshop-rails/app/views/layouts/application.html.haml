@@ -1,0 +1,62 @@
+!!!
+%html
+  %head
+    %title Webshop
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"   
+    =# stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+    =# stylesheet_link_tag 'print.css', :media => 'print'
+    /[if lt IE 8]
+      = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+    
+    = csrf_meta_tags
+  %body   
+    %div.container.showgri
+      %div#header.span-24
+        %div.span-7.append-6
+          Articles – Contact – Privacy – Terms
+        %div.span-10.last.white
+          Sign In  
+          %input{:name=>"username",:type=>"text", :value=>"Username"}/
+          %input{:name=>"passport",:type=>"password", :value=>"Passport"}/    
+          %button{:name=>"go",:type=>"button"}
+            Go     
+          %span.margin_left_5 Sign Up
+                                 
+      %div#main-branding.span-24
+        %div.logo.span-6
+          = image_tag "logo.png"  
+        %div.ad.span-11
+          = image_tag "ad.jpg"        
+                    
+      %div#navigation.span-24
+        %div.nav-item.span-17
+          %ul
+            %li Home
+            %li Men
+            %li Women
+            %li Collection  
+            %li Storeproducts
+            %li Affilateproducts
+        %div.search
+          %input{ :value => "search" }
+                    
+      %div#content.span-24    
+        = yield     
+        
+      %div#footer.span-24
+        %div.push-1.span-10
+          Home | Mens | Women | Collections | Store Products | Affiliate Products
+          Copyright &copy; 2011. All Rights Reserved by <span class="white">Fashion Store.</span>
+        %div.logo.span-5.push-8
+          = image_tag "logo_invert.png"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Hello Ext</title>
+
+</head>
+<body>
+	<h2>Why so many files and folders?</h2>
+<ul>
+	<li>
+		The <u>build</u> folder contains the descriptor files to create a custom version of the Ext JS library. In here, we can find the JSB3 files that describe the files and packages to build the library from the source code. These JSB3 files will be used by the JavaScript Builder utility that we will learn to use later in this book.
+	</li>
+	<li>
+		The <u>builds</u> folder contains the minified version of the library; we find the foundation, the core, and the Ext JS sandboxed version of the library. The sandboxed version allows us to run Ext 4 and any older version of the Ext library on the same page.
+	</li>
+	<li>
+		The <u>docs</u> folder contains documentation of the API. Just open the index. html file and you're going to see the packages and classes with all the configuration, properties, methods and events available, guides and tutorials, links to watch videos online, and examples.
+	</li>
+	<li>
+		The <u>examples</u> folder contains a lot of examples of the components, layouts, and small applications that are built to show what we can do with the library. Open the index.html file and explore the samples and demos by yourself. It's important to say that some of them need to run on a web server, especially those that use Ajax.
+	</li>
+	<li>
+		The <u>locale</u> folder has the translations of 45 languages. By default the components are displayed in English, but you can translate them to any other language.		
+	</li>
+	<li>
+		The <u>jsbuilder</u> folder contains the tool to build and compress our source code; the tool is written in Java and uses the YUI Compressor to improve file minification. The minification process allows us to create packages with all the classes and files that are needed in our application, this is an important step before deploying our application in production.
+	</li>
+	<li>
+		The <u>src</u> folder contains all the classes of the framework. Each class is in its own file so we can read it easily, and every folder corresponds to the namespace assigned to the class. For example, the class Ext.grid.Panel is in a file called Panel.js that is in a folder called grid (src/grid/Panel.js).
+	</li>
+	<li>
+		The <u>resources</u> folder is where the styles and images are located; also we can find the Sass files to create our custom theme in here. Sass is an extension of CSS3 to improve the language; we can use variables, mixins, conditionals, expressions, and more with Sass.
+	</li>
+	<li>
+		The <u>welcome</u> folder contains the styles and images that are shown when we open the index.html file in the root folder. If you look at the root folder you can also see other JavaScript files. Basically, they are the compressed, debug, and development versions of the library.
+	</li>
+	<li>
+		The <b>ext-all.js</b> file is the complete library with all the components, utilities, and classes. This file is minified so we can use it for a production environment.
+	</li>
+	<li>
+		The <b>ext-all-debug.js</b> file is the same as the ext-all.js file, but it is not minified so we can use this file to debug our application.
+	</li>
+	<li>
+		The <b>ext-all-dev.js</b> file is similar to the ext-all-debug.js file but contains additional code to show more specific errors and warnings at development time; we should use this file when developing our application.
+	</li>
+	<li>
+		The <b>ext.js</b> file is the core and foundation layer for Ext JS. If we use this file, we're not loading the whole library; this file contains only the class system, the loader, and a few other classes. We can use the Ext.Loader class to load just the required classes and not the entire framework; we should use this file only in development environments.
+	</li>
+	<li>
+		The <b>ext-debug.js</b> and ext-dev.js files follow the same concept as mentioned with the ext-all files. The ext-debug.js file is an exact version of the ext.js file but is not minified. The ext-dev.js file contains extra code to log more specific errors in a development environment.
+	</li>
+</ul>
+
+
+
+</body>
+</html>

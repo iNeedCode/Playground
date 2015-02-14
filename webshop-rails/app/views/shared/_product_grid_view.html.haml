@@ -1,0 +1,23 @@
+/ every third product should get the 'last' css-class to stay in the same row
+- last_column_item = 3                               
+
+%div 
+  - for i in 1..6
+    - if (i % last_column_item) == 0
+      %div.span-5.item.last
+        = image_tag "product_grid.png"
+        Premium Denim Women's Hidden 
+        %br
+        %span.red $179.00
+        |
+        = image_tag "cart_icon.png"
+        %span.gray Add to Cart
+    - else
+      %div.span-5.item 
+        = image_tag "product_grid.png"
+        Premium Denim Women's Hidden
+        %br
+        %span.red $179.00
+        |
+        = image_tag "cart_icon.png"
+        %span.gray Add to Cart
